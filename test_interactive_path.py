@@ -9,21 +9,20 @@ from dogtail.utils import run
 
 from steps import *
 
-def start_pidgin():
+def setup_function(module):
     config.searchCutoffCount = 3
     config.defaultDelay = 1.5
     config.blinkOnActions = True
     config.fatalErrors = True
-
-    pid = subprocess.Popen(['pidgin',  '-c', '/home/tvbinar/.alice_purple'])
+    module.pid = subprocess.Popen(['pidgin',  '-c', '/home/tvbinar/.alice_purple'])
     time.sleep(2)
-    focus.application('Pidgin')
-    return pid
 
+def teardown_function(module):
+    module.pid.terminate()
 
 
 def test_interactive_path():
-    pid = start_pidgin()
+    focus.application('Pidgin')
     root.application('Pidgin')
 
     open_conversation_with("bob@localhost")
@@ -44,6 +43,4 @@ def test_interactive_path():
     assert message_is_present('bob@localhost', 'Private conversation lost.')
     assert otr_status_is('Not private')
 
-    raw_input("End?\n")
-    pid.terminate()
 

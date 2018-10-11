@@ -26,7 +26,7 @@ def end_private_conversation():
 def send_message(buddy, message):
     focus.window(buddy)
     focus.text()
-    type(message)
+    typeText(message)
     pressKey("Enter")
 
 # TODO: create package assertions
