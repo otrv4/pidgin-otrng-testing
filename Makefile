@@ -12,6 +12,14 @@ test:
 		-v $(shell pwd)/dogtail-root:/tmp/dogtail-root:Z \
 		$(DOCKER_IMAGE) pytest
 
+docker-debug:
+	sudo docker run -t \
+		-e "ENABLE_DEBUG=true" \
+		-v $(shell pwd):/src:Z \
+		-v $(shell pwd)/dogtail-root:/tmp/dogtail-root:Z \
+		-p 5900:5900 \
+		$(DOCKER_IMAGE) pidgin -c /src/base_purple
+
 docker-build:
 	sudo docker build -t $(DOCKER_IMAGE) .
 

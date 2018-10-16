@@ -11,6 +11,12 @@ sleep 0.5
 # Enable Assistive Technology support
 gsettings set org.gnome.desktop.interface toolkit-accessibility true
 
+# TODO: Env variable to set debug
+if [ -n "$ENABLE_DEBUG" ]
+then
+    x11vnc -display :0 -N -forever -create &
+fi
+
 $@
 status=$?
 

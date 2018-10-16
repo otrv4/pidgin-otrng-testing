@@ -21,8 +21,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
    --no-install-recommends python python3-pip python-gobject
 
 # Pidgin
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    pidgin
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install pidgin
+
+# Enable remote debugging with x11vnc
+EXPOSE 5900
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install x11vnc
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -30,6 +33,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 VOLUME /src
 VOLUME /tmp/dogtail-root
 
+ADD . /src
 ADD dogtail-wrapper.sh /bin/dogtail-wrapper
 
 WORKDIR /src

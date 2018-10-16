@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import subprocess
-import time
+import os
+import signal
 
 from dogtail.config import config
 from dogtail.tree import root
@@ -14,11 +14,14 @@ def setup_function(module):
     config.defaultDelay = 1.5
     config.blinkOnActions = True
     config.fatalErrors = True
-    module.pidgin_process = run('pidgin -c ./base_purple')
+    module.pidgin_pid = run('pidgin -c ./base_purple')
     module.pidgin = root.application('Pidgin')
 
+def teardown_function(module):
+    os.kill(module.pidgin_pid, signal.SIGTERM)
+
 def test_interactive_path():
-    focus.application('Pidgin')
+    assert focus.application('Pidgin')
 
     open_conversation_with("bob@localhost")
     assert otr_status_is('Not private')
