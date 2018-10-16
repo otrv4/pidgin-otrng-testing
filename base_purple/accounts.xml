@@ -6,25 +6,27 @@
 		<name>alice@localhost/</name>
 		<password>alice</password>
 		<statuses>
-			<status type='available' name='Disponível' active='true'>
+			<status type='available' name='Available' active='false'>
 				<attributes/>
 			</status>
-			<status type='mood' name='Sentimento' active='false'>
+			<status type='mood' name='Feeling' active='false'>
 				<attributes/>
 			</status>
-			<status type='freeforchat' name='Disponível para bate-papo' active='false'>
+			<status type='freeforchat' name='Chatty' active='false'>
 				<attributes/>
 			</status>
-			<status type='away' name='Ausente' active='false'>
+			<status type='away' name='Away' active='true'>
+				<attributes>
+					<attribute id='message' value='Não estou aqui no momento'/>
+				</attributes>
+			</status>
+			<status type='extended_away' name='Extended away' active='false'>
 				<attributes/>
 			</status>
-			<status type='extended_away' name='Ausente (estendido)' active='false'>
+			<status type='dnd' name='Do Not Disturb' active='false'>
 				<attributes/>
 			</status>
-			<status type='dnd' name='Não perturbe' active='false'>
-				<attributes/>
-			</status>
-			<status type='offline' name='Desconectado' active='false'>
+			<status type='offline' name='Offline' active='false'>
 				<attributes/>
 			</status>
 		</statuses>
@@ -47,25 +49,27 @@
 		<name>bob@localhost/</name>
 		<password>bob</password>
 		<statuses>
-			<status type='available' name='Disponível' active='true'>
+			<status type='available' name='Available' active='false'>
 				<attributes/>
 			</status>
-			<status type='mood' name='Sentimento' active='false'>
+			<status type='mood' name='Feeling' active='false'>
 				<attributes/>
 			</status>
-			<status type='freeforchat' name='Disponível para bate-papo' active='false'>
+			<status type='freeforchat' name='Chatty' active='false'>
 				<attributes/>
 			</status>
-			<status type='away' name='Ausente' active='false'>
+			<status type='away' name='Away' active='true'>
+				<attributes>
+					<attribute id='message' value='Não estou aqui no momento'/>
+				</attributes>
+			</status>
+			<status type='extended_away' name='Extended away' active='false'>
 				<attributes/>
 			</status>
-			<status type='extended_away' name='Ausente (estendido)' active='false'>
+			<status type='dnd' name='Do Not Disturb' active='false'>
 				<attributes/>
 			</status>
-			<status type='dnd' name='Não perturbe' active='false'>
-				<attributes/>
-			</status>
-			<status type='offline' name='Desconectado' active='false'>
+			<status type='offline' name='Offline' active='false'>
 				<attributes/>
 			</status>
 		</statuses>

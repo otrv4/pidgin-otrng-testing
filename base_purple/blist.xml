@@ -7,14 +7,14 @@
 			<contact>
 				<buddy account='alice@localhost/' proto='prpl-jabber'>
 					<name>bob@localhost</name>
-					<setting name='last_seen' type='int'>1539700141</setting>
+					<setting name='last_seen' type='int'>1539700666</setting>
 				</buddy>
 				<setting name='gtk-mute-sound' type='bool'>0</setting>
 			</contact>
 			<contact>
 				<buddy account='bob@localhost/' proto='prpl-jabber'>
 					<name>alice@localhost</name>
-					<setting name='last_seen' type='int'>1539700141</setting>
+					<setting name='last_seen' type='int'>1539700666</setting>
 				</buddy>
 			</contact>
 		</group>
