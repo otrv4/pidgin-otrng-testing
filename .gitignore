@@ -2,8 +2,11 @@
 dogtail-root/*
 base_purple/plugins*
 base_purple/logs
+base_purple/accounts.xml
+base_purple/blist.xml
+base_purple/prefs.xml
+base_purple/status.xml
 base_purple/otr4.client_profile
 base_purple/otr4.prekey_messages
 base_purple/otr4.prekey_profile
-base_purple/prefs.xml
 
