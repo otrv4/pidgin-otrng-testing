@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<account version='1.0'>
+	<account>
+		<protocol>prpl-jabber</protocol>
+		<name>alice@localhost/</name>
+		<password>alice</password>
+		<statuses>
+			<status type='available' name='Disponível' active='true'>
+				<attributes/>
+			</status>
+			<status type='mood' name='Sentimento' active='false'>
+				<attributes/>
+			</status>
+			<status type='freeforchat' name='Disponível para bate-papo' active='false'>
+				<attributes/>
+			</status>
+			<status type='away' name='Ausente' active='false'>
+				<attributes>
+					<attribute id='message' value='Não estou aqui no momento'/>
+				</attributes>
+			</status>
+			<status type='extended_away' name='Ausente (estendido)' active='false'>
+				<attributes/>
+			</status>
+			<status type='dnd' name='Não perturbe' active='false'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Desconectado' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<settings>
+			<setting name='bosh_url' type='string'></setting>
+			<setting name='auth_plain_in_clear' type='bool'>0</setting>
+			<setting name='custom_smileys' type='bool'>1</setting>
+			<setting name='port' type='int'>5222</setting>
+			<setting name='connect_server' type='string'></setting>
+			<setting name='ft_proxies' type='string'></setting>
+			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='connection_security' type='string'>require_tls</setting>
+			<setting name='use-global-buddyicon' type='bool'>1</setting>
+			<setting name='silence-suppression' type='bool'>0</setting>
+		</settings>
+		<settings ui='gtk-gaim'>
+			<setting name='auto-login' type='bool'>1</setting>
+		</settings>
+		<current_error/>
+	</account>
+	<account>
+		<protocol>prpl-jabber</protocol>
+		<name>bob@localhost/</name>
+		<password>bob</password>
+		<statuses>
+			<status type='available' name='Disponível' active='true'>
+				<attributes/>
+			</status>
+			<status type='mood' name='Sentimento' active='false'>
+				<attributes/>
+			</status>
+			<status type='freeforchat' name='Disponível para bate-papo' active='false'>
+				<attributes/>
+			</status>
+			<status type='away' name='Ausente' active='false'>
+				<attributes>
+					<attribute id='message' value='Não estou aqui no momento'/>
+				</attributes>
+			</status>
+			<status type='extended_away' name='Ausente (estendido)' active='false'>
+				<attributes/>
+			</status>
+			<status type='dnd' name='Não perturbe' active='false'>
+				<attributes/>
+			</status>
+			<status type='offline' name='Desconectado' active='false'>
+				<attributes/>
+			</status>
+		</statuses>
+		<userinfo>&lt;vCard xmlns=&apos;vcard-temp&apos; version=&apos;2.0&apos; prodid=&apos;-//HandGen//NONSGML vGen v1.0//EN&apos;&gt;&lt;FN&gt;Giovane&lt;/FN&gt;&lt;/vCard&gt;</userinfo>
+		<settings>
+			<setting name='bosh_url' type='string'></setting>
+			<setting name='auth_plain_in_clear' type='bool'>0</setting>
+			<setting name='custom_smileys' type='bool'>1</setting>
+			<setting name='port' type='int'>5222</setting>
+			<setting name='connect_server' type='string'></setting>
+			<setting name='ft_proxies' type='string'></setting>
+			<setting name='check-mail' type='bool'>0</setting>
+			<setting name='connection_security' type='string'>require_tls</setting>
+			<setting name='use-global-buddyicon' type='bool'>1</setting>
+			<setting name='silence-suppression' type='bool'>0</setting>
+		</settings>
+		<settings ui='gtk-gaim'>
+			<setting name='auto-login' type='bool'>1</setting>
+		</settings>
+		<current_error/>
+	</account>
+</account>

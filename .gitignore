@@ -1,2 +1,3 @@
 *.pyc
 dogtail-root/*
+base_purple/plugins*

@@ -31,7 +31,6 @@ VOLUME /src
 VOLUME /tmp/dogtail-root
 
 ADD dogtail-wrapper.sh /bin/dogtail-wrapper
-ADD . /src
 
 WORKDIR /src
 RUN pip3 install -r /src/requirements.txt

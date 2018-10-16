@@ -10,20 +10,15 @@ from dogtail.utils import run
 from steps import *
 
 def setup_function(module):
-    config.searchCutoffCount = 3
+    config.searchCutoffCount = 2
     config.defaultDelay = 1.5
     config.blinkOnActions = True
     config.fatalErrors = True
-    module.pid = subprocess.Popen(['pidgin',  '-c', '/home/tvbinar/.alice_purple'])
-    time.sleep(2)
-
-def teardown_function(module):
-    module.pid.terminate()
-
+    module.pidgin_process = run('pidgin -c ./base_purple')
+    module.pidgin = root.application('Pidgin')
 
 def test_interactive_path():
     focus.application('Pidgin')
-    root.application('Pidgin')
 
     open_conversation_with("bob@localhost")
     assert otr_status_is('Not private')
