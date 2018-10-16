@@ -18,7 +18,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
 
 # Python env for dogtail
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
-   --no-install-recommends python python-pip python-gobject
+   --no-install-recommends python python3-pip python-gobject
 
 # Pidgin
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
@@ -34,7 +34,7 @@ ADD dogtail-wrapper.sh /bin/dogtail-wrapper
 ADD . /src
 
 WORKDIR /src
-RUN pip install -r /src/requirements.txt
+RUN pip3 install -r /src/requirements.txt
 
 ENTRYPOINT ["/bin/dogtail-wrapper"]
 CMD ["pytest"]
