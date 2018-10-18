@@ -1,6 +1,6 @@
 *.pyc
-dogtail-root/*
-base_purple/plugins*
+dogtail-root/
+base_purple/plugins
 base_purple/logs
 base_purple/accounts.xml
 base_purple/blist.xml
