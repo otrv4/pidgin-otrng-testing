@@ -1,3 +1,4 @@
+wheel
 dogtail==0.9.10
 pytest==3.8.2
 pytest-repeat==0.7.0
