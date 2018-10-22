@@ -1,4 +1,5 @@
 *.pyc
+nohup.out
 dogtail-root/
 base_purple/plugins
 base_purple/logs

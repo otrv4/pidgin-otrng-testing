@@ -13,4 +13,3 @@ make && make install
 cp /usr/local/lib/pidgin/* /src/base_purple/plugins
 
 
-
